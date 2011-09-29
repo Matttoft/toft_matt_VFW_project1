@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- Matt Toft
+Project: Web App project 1
+Term: VFW 1110 -->
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name = "keywords" content="html5, mobile development, Full Sail University" />
+<meta name= "description" content="My first HTML5 document. " />
+<meta name = "robots" content="index, follow" />
+<meta name = "viewport" content="user-scalable=yes, width=divice-width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+
+<title>Axis Church</title>
+
+<link rel="stylesheet" href="css/style.css?=1.0">
+</head>
+<body>
+
+<!--Header -->
+  <header>
+  <h1>Axis Church Ministry Opportunities</h1>
+  <!-- Navigation-->
+<nav>
+<ul>
+<li><a href = "#">Home</a></li>
+<li><a href = "#">Next</a></li>
+<li><a href = "#">Previous</a></li>
+<li><a href="#">Login</a></li>
+</ul>
+</nav>
+
+<h2>Sign-up for Ministry Opportunities and Updates.</h2>
+</header>
+
+<form action ="" method="post">
+<fieldset>
+<legend>Profile Data</legend>
+
+<ul> <!-- Labels and info boxes -->
+<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
+<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
+<li><label for="email">Email:</label><input type="text" id="email" /></li>
+<li><label for="username">User Name:</label><input type="text" id="username" />
+<input type="submit" value="Check Availability" /> </li>
+<li><label for="pword">Password:</label><input type="password" id="pword" /></li>
+<li><label for="cpword">Confirm Password:</label><input type="password" id="cpword" disabled /></li>
+<li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
+</ul>
+
+<ul><!--birthdate-->
+<li>Enter Birthday: format(YYYY-MM-DD)
+<input type="date" name="user_date" /></li>
+</ul>
+
+<ul><!-- question -->
+<li>Sex</li>
+
+<li><input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label></li>
+<li><input type="radio" value="female" id="female" name="sex"/><label for="female">Female</label></li>
+</ul>
+
+
+<ul><!--dropdown menu -->
+<li>Ministry Opportunities:
+<select id="minitries">
+
+<option></option>
+<option>Impressions(Greeter)</option>
+<option>Usher</option>
+<option>Custodial</option>
+<option>Kids Kraze Group Leader</option>
+<option>Kids Kraze Worship Team</option>
+<option>Kids Kraze Tech</option>
+<option>Adult Worship Team</option>
+<option>Adult Tech</option>
+<option>Nursery (4yr-K)</option>
+<option>Nursery (Newborn-3yr)</option>
+<option>Outreach</option>
+
+</select>
+
+<!--slider-->
+<li><label for"attending">How long (in months) have you been attendng Axis Church</li>
+<input type="range" min="1" max="30" id="attending"/>
+</li>
+<!--partner? -->
+<li>Are you an Axis Church Partner?</li>
+<input type="checkbox" name="yes" value="yes">Yes
+<input type="checkbox" name = "no" value="no">No
+</li>
+<li>If yes, please indicate whether you came from another church or are a new believer.</li>
+<label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" />
+
+<!--comments -->
+<p>Please Share your faith history and testimony here:</p>
+<textarea rows="8" cols="30">Type here!</textarea>
+</ul>
+</fieldset>
+<!--submit-->
+<input type="submit" value="Submit" />
+
+<div>
+<!--Data links -->
+<a href="#">Clear Stored Data</a>
+<a href="#">Display Data</a>
+</div>
+
+<small>&copy;2011 Matt Toft VFW1110</small>
+</body>
+</html>
+
