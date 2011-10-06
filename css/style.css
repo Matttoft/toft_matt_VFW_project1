@@ -10,9 +10,8 @@ margin: auto;
 padding: 10px;
 background: #1C1A17;
 color: #D2CDBD;
-}
 #content{width: 480px;height: 690px;overflow: scroll;}
-
+}
 
 h1{
 text-align: center;
@@ -44,5 +43,31 @@ p{
 font-family: Arial, Helvetica, san-serif;
 	
 }
+
+legend{
+color: #000000;
+text-transform: uppercase;
+font-weight: bold;
+}
+
+form {
+background: #D2CDBD;
+color: #1C1A17;
+-webkit-box-shadow:
+inset 5px 5px 64px,
+inset -5px -5px 64px;
+-moz-box-shadow:
+inset 5px 5px 64px,
+inset -5px -5px 64px;
+box-shadow:
+inset 5px 5px 64px,
+inset -5px -5px 64px;
+}
+
+option{
+color: green;	
+}
+
+
 
 

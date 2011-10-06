@@ -57,10 +57,10 @@ Term: VFW 1110 -->
 <!-- question -->
 <li>Sex</li>
  
-<ul>
-<li><input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label></li>
-<li><input type="radio" value="female" id="female" name="sex"/><label for="female">Female</label></li>
-</ul>
+
+<input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label>
+<input type="radio" value="female" id="female" name="sex"/><label for="female">Female</label>
+
  
  
 <!--dropdown menu -->
@@ -82,6 +82,8 @@ Term: VFW 1110 -->
  
 </select>
 </ul>
+
+<ul>
 <!--slider-->
 <li><label for="attending">How long (in months) have you been attendng Axis Church</label></li>
 <input type="range" min="1" max="30" id="attending"/>
@@ -92,12 +94,13 @@ Term: VFW 1110 -->
 <input type="checkbox" name = "no" value="no">No
  
 <li>If yes, please indicate whether you came from another church or are a new believer.</li>
-<label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" />
+<li><label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" /></li>
  
 <!--comments -->
 <li><p>Please Share your faith history and testimony here:</p>
 <textarea rows="8" cols="30">Type here!</textarea></li>
- 
+</ul>
+
 </fieldset>
 <!--submit-->
 <input type="submit" value="Submit" />
