@@ -11,12 +11,13 @@ Term: VFW 1110 -->
 <meta name = "viewport" content="user-scalable=yes, width=divice-width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="MobileOptimized" content="320" />
-
+ 
 <title>Axis Church</title>
-
+ <link href = "css/style.css" rel = "stylesheet" type = "text/css" />
+ 
 </head>
 <body>
-
+ 
 <!--Header -->
   <header>
   <h1>Axis Church Ministry Opportunities</h1>
@@ -29,14 +30,14 @@ Term: VFW 1110 -->
 <li><a href="#">Login</a></li>
 </ul>
 </nav>
-
+ 
 <h2>Sign-up for Ministry Opportunities and Updates.</h2>
 </header>
-
+ 
 <form action ="" method="post">
 <fieldset>
 <legend>Profile Data</legend>
-
+ 
 <ul> <!-- Labels and info boxes -->
 <li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
 <li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
@@ -47,24 +48,25 @@ Term: VFW 1110 -->
 <li><label for="cpword">Confirm Password:</label><input type="password" id="cpword" disabled /></li>
 <li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
 </ul>
-
+ 
 <ul><!--birthdate-->
 <li>Enter Birthday: format(YYYY-MM-DD)
 <input type="date" name="user_date" /></li>
-</ul>
-
-<ul><!-- question -->
+ 
+ 
+<!-- question -->
 <li>Sex</li>
-
+ 
+<ul>
 <li><input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label></li>
 <li><input type="radio" value="female" id="female" name="sex"/><label for="female">Female</label></li>
 </ul>
-
-
-<ul><!--dropdown menu -->
+ 
+ 
+<!--dropdown menu -->
 <li>Ministry Opportunities:
 <select id="minitries">
-
+ 
 <option></option>
 <option>Impressions(Greeter)</option>
 <option>Usher</option>
@@ -77,7 +79,7 @@ Term: VFW 1110 -->
 <option>Nursery (4yr-K)</option>
 <option>Nursery (Newborn-3yr)</option>
 <option>Outreach</option>
-
+ 
 </select>
 </ul>
 <!--slider-->
@@ -88,25 +90,27 @@ Term: VFW 1110 -->
 <li>Are you an Axis Church Partner?</li>
 <input type="checkbox" name="yes" value="yes">Yes
 <input type="checkbox" name = "no" value="no">No
-
+ 
 <li>If yes, please indicate whether you came from another church or are a new believer.</li>
 <label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" />
-
+ 
 <!--comments -->
-<p>Please Share your faith history and testimony here:</p>
-<textarea rows="8" cols="30">Type here!</textarea>
-</ul>
+<li><p>Please Share your faith history and testimony here:</p>
+<textarea rows="8" cols="30">Type here!</textarea></li>
+ 
 </fieldset>
 <!--submit-->
 <input type="submit" value="Submit" />
-
+ 
 <div>
 <!--Data links -->
 <a href="#">Clear Stored Data</a>
 <a href="#">Display Data</a>
 </div>
-
+ 
 <small>&copy;2011 Matt Toft VFW1110</small>
 </body>
 </html>
-
+ 
+ 
+ 

@@ -1,0 +1,48 @@
+/* CSS for VFW 1101
+ * Matt Toft
+ */
+
+
+
+body {font-family:Arial, Helvectica, san-serif;
+width: 571px;
+margin: auto;
+padding: 10px;
+background: #1C1A17;
+color: #D2CDBD;
+}
+#content{width: 480px;height: 690px;overflow: scroll;}
+
+
+h1{
+text-align: center;
+margin: 10px 60px;
+border: 3px solid black;
+padding: 3px;
+background:   #1C1A17;
+color:#D2CDBD;		
+}
+
+h2{
+text-align: center;	
+margin: 10px 60px;
+border: 3px solid black;
+padding: 3px;
+background: #1C1A17;	
+color:#D2CDBD;	
+}
+
+nav{
+font-family: Helvetica, san-serif;
+font-weight: bold;
+text-transform: uppercase;
+color: #D2CDBD;	
+
+}
+
+p{
+font-family: Arial, Helvetica, san-serif;
+	
+}
+
+
