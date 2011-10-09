@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	function getcheckval(){
 		if($('fav').checked){
-			memtypeval=$('memtype').value;
+			memtypeval=$('partner').value;
 		}else{
 			memtypeval="No"
 		}
@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		getradio();
 		getcheckval();
 		var item={};
-		item.group=["Ministry:", $('ministries').value];
+		item.group=["Ministry:", $('select').value];
 		item.fname=["First Name:", $('fname').value];
 		item.lname=["Last Name:", $('lname').value];
 		item.email=["Email:", $('email').value];
@@ -76,10 +76,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		item.dob=["Birthdate:", $('dob').value];
 		item.radios=["Sex:", sexval];
 		item.attending=["Attending Months:", $('attending').value];
-		item.memtype=["Member Type:", memtypeval];
+		item.partner=["Partner:", memtypeval];
+		item.memtype=["Member Type:", $('memtype').value];
 		item.story=["Story:", $('story').value];
 		localStorage.setItem(id, JSON.stringify(item));
-		alert('Data submitted, a ministry leader will contact you soon.')
+		alert("Data submitted, a ministry leader will contact you soon.");	
 	}
 	
 	function getdata(){
@@ -118,7 +119,17 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;
 		}
 	}
-	var ministry=["--Select One--","Impressions (Greeter)","Usher","Custodial","Kids Kraze Group Leader","Kids Kraze Worship Team","Kids Kraze Tech","Adult Worship Team","Nursery (4yr-K)","Nursery (newborn-3yr)","Outreach"],  
+	var ministry=["--Select One--",
+	"Impressions (Greeter)",
+	"Usher",
+	"Custodial",
+	"Kids Kraze Group Leader",
+	"Kids Kraze Worship Team",
+	"Kids Kraze Tech",
+	"Adult Worship Team",
+	"Nursery (4yr-K)",
+	"Nursery (newborn-3yr)",
+	"Outreach"],  
    		sexval,
    		memtypeval="No";
     makeList();
@@ -128,37 +139,11 @@ window.addEventListener("DOMContentLoaded", function(){
     
     displink.addEventListener("click", getdata);
     
-   var clearlink=$("clear");
+    var clearlink=$("clear");
     
-    displink.addEventListener("click", clearLocal	);
+    clearlink.addEventListener("click", clearLocal);
   
-    var save=$("submit");
-
+	var save = $('submit');
+	
 	save.addEventListener("click", storeData);
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	});

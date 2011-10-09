@@ -41,7 +41,7 @@ Term: VFW 1110 -->
 <ul id="geninfo"> <!-- Labels and info boxes -->
 <li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
 <li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
-<li><label for="email">Email:</label><input type="text" id="email" /></li>
+<li><label for="email">Email:</label><input type="email" id="email" /></li>
 <li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
 </ul>
  
@@ -71,7 +71,7 @@ Term: VFW 1110 -->
 <ul>
 <!--slider-->
 <li><label for="attending">How long (in months) have you been attendng Axis Church</label></li>
-<input type="range" min="0" max="30" value="0" id="attending"onchange="showValue(this.value)" />
+<input type="range" min="0" max="30" value="0" id="attending" onchange="showValue(this.value)" />
 <span id="range">0</span>
 <script type="text/javascript">
 function showValue(newValue)
@@ -86,7 +86,7 @@ function showValue(newValue)
 
  
 <li>If yes, please indicate whether you came from another church or are a new believer.</li>
-<li><label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" /></li>
+<label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" />
  
 <!--comments -->
 <li><p id="story">Please Share your faith history and testimony here:</p>
@@ -95,9 +95,9 @@ function showValue(newValue)
 
 </fieldset>
 <!--submit-->
-<input type="submit" id="submit" value="Submit" />
+<input type="submit" id="submit" value="Submit Form" />
 </form>	
-<div>
+<div id="storeData">
 <!--Data links -->
 <a href="#" id="clear">Clear Stored Data</a>  
 <a href="#" id="displayLink">Display Data</a>
