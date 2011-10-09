@@ -43,9 +43,9 @@ Term: VFW 1110 -->
 <li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
 <li><label for="email">Email:</label><input type="text" id="email" /></li>
 <li><label for="username">User Name:</label><input type="text" id="username" />
-<input type="submit" value="Check Availability" /> </li>
+<input type="submit" value="Check Availability" id='checkavail' /> </li>
 <li><label for="pword">Password:</label><input type="password" id="pword" /></li>
-<li><label for="cpword">Confirm Password:</label><input type="password" id="cpword" disabled /></li>
+<li><label for="cpword">Confirm Password:</label><input type="password" id="cpword" disabled /></li>	
 <li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
 </ul>
  
@@ -78,9 +78,9 @@ Term: VFW 1110 -->
 <input type="range" min="1" max="30" id="attending"/>
 </li>
 <!--partner? -->
-<li>Are you an Axis Church Partner?</li>
+<li>Are you an Axis Church Partner?(Leave blank for no.)</li>
 <input type="checkbox" id="partner" name="yes" value="yes">Yes
-<input type="checkbox" id="nopartner" name = "no" value="no">No
+
  
 <li>If yes, please indicate whether you came from another church or are a new believer.</li>
 <li><label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" /></li>
@@ -96,8 +96,9 @@ Term: VFW 1110 -->
 </form>	
 <div>
 <!--Data links -->
-<a href="#" id="clear">Clear Stored Data</a>
-<a href="#" id="display">Display Data</a>
+<a href="#" id="clear">Clear Stored Data</a>  
+<a href="#" id="displayLink">Display Data</a>
+<a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
 </div>
  
 <small>&copy;2011 Matt Toft VFW1110</small>
