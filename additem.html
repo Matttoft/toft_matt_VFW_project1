@@ -42,10 +42,6 @@ Term: VFW 1110 -->
 <li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
 <li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
 <li><label for="email">Email:</label><input type="text" id="email" /></li>
-<li><label for="username">User Name:</label><input type="text" id="username" />
-<input type="submit" value="Check Availability" id='checkavail' /> </li>
-<li><label for="pword">Password:</label><input type="password" id="pword" /></li>
-<li><label for="cpword">Confirm Password:</label><input type="password" id="cpword" disabled /></li>	
 <li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
 </ul>
  
@@ -66,7 +62,7 @@ Term: VFW 1110 -->
  
 <!--dropdown menu -->
 <ul>
-<li id="ministries">
+<li id="select">
 <label for="dropdown">Axis Ministry Opportunies:</label> 
 </li>
 			
@@ -75,7 +71,14 @@ Term: VFW 1110 -->
 <ul>
 <!--slider-->
 <li><label for="attending">How long (in months) have you been attendng Axis Church</label></li>
-<input type="range" min="1" max="30" id="attending"/>
+<input type="range" min="0" max="30" value="0" id="attending"onchange="showValue(this.value)" />
+<span id="range">0</span>
+<script type="text/javascript">
+function showValue(newValue)
+{
+	document.getElementById("range").innerHTML=newValue;
+}
+</script>
 </li>
 <!--partner? -->
 <li>Are you an Axis Church Partner?(Leave blank for no.)</li>
@@ -98,7 +101,7 @@ Term: VFW 1110 -->
 <!--Data links -->
 <a href="#" id="clear">Clear Stored Data</a>  
 <a href="#" id="displayLink">Display Data</a>
-<a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
+<a href="additem.html" id="addnew" style="display:none;">Add New Item</a>
 </div>
  
 <small>&copy;2011 Matt Toft VFW1110</small>

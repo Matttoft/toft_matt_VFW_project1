@@ -11,20 +11,19 @@ window.addEventListener("DOMContentLoaded", function(){
 	return theElement;
 	}
 	
-	function makelist(){
-	  var formtag=document.getElementsByTagName("form"),
-	  	  selectLi=$("ministries"),
-	  	  makeSelect=document.createElement("ministries");
-	  	  makeSelect.setAttribute("id","groups");
-	  for (var i=0, j=ministry.length; i<j;i++){
-	  	   var makeOption = document.createElement('option');
-	  	   var optText = ministry[i];
-	  	   makeOption.setAttribute("value", optText);
-	  	   makeOption.innerHTML=optText;
-	  	   makeSelect.appendChild(makeOption);
-	  	
-	  }	  
-	 selectLi.appendChild(makeSelect);
+		function makeList(){
+			var formTag = document.getElementsByTagName("form");
+			var	selectLi = $('select');
+			var makeSelect = document.createElement('select');
+				makeSelect.setAttribute("id", "choices");
+		for(var i = 0, j = ministry.length; i<j; i++){
+				var makeOption = document.createElement('option');
+			var optText = ministry[i];
+					makeOption.setAttribute("value", optText);
+					makeOption.innerHTML = optText;
+					makeSelect.appendChild(makeOption);
+		}
+			selectLi.appendChild(makeSelect);
 	}
 	
 	function getradio(){
@@ -47,15 +46,15 @@ window.addEventListener("DOMContentLoaded", function(){
 	function toggleControls(n){
 		switch(n){
 			case "on":
-				$('minitform'),style.display="none";
+				$('minform').style.display="none";
 				$('clear').style.display="inline";
-				$('displaydatalink')style.display="none";
+				$('displayLink').style.display="none";
 				$('addnew').style.display="inline";
 				break;
 			case "off":
-				$('minitform'),style.display="block";
+				$('minitform').style.display="block";
 				$('clear').style.display="inline";
-				$('displaydatalink')style.display="inline";
+				$('displayLink').style.display="inline";
 				$('addnew').style.display="none";
 				$('items').style.display="none";
 				break;
@@ -73,8 +72,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		item.fname=["First Name:", $('fname').value];
 		item.lname=["Last Name:", $('lname').value];
 		item.email=["Email:", $('email').value];
-		item.username=["Username:", $('username').value];
-		item.pword=["Password:", $('pword').value];
 		item.tel=["Telephone #:", $('tel').value];
 		item.dob=["Birthdate:", $('dob').value];
 		item.radios=["Sex:", sexval];
@@ -86,6 +83,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	
 	function getdata(){
+		toggleControls("on")
 		var makediv=document.createElement('div');
 		makediv.setAttribute("id","items");
 		var createlist=document.createElement('ul');
@@ -109,20 +107,31 @@ window.addEventListener("DOMContentLoaded", function(){
 			
 		}
 	}
+	
+	function clearLocal(){
+		if(localStorage.length===0){
+		alert("There is no data to clear.")	
+		}else{
+			localStorage.clear();
+			alert("Storage Cleared")
+			window.location.reload();
+			return false;
+		}
+	}
 	var ministry=["--Select One--","Impressions (Greeter)","Usher","Custodial","Kids Kraze Group Leader","Kids Kraze Worship Team","Kids Kraze Tech","Adult Worship Team","Nursery (4yr-K)","Nursery (newborn-3yr)","Outreach"],  
    		sexval,
    		memtypeval="No";
-    makelist();
+    makeList();
  
     
-    var displink=$("display");
+    var displink=$("displayLink");
     
     displink.addEventListener("click", getdata);
     
-   /* var clearlink=$("clear");
+   var clearlink=$("clear");
     
-    displink.addEventListener("click", clearData);
-    */
+    displink.addEventListener("click", clearLocal	);
+  
     var save=$("submit");
 
 	save.addEventListener("click", storeData);
