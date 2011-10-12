@@ -3,112 +3,123 @@
 Project: Web App project 1
 Term: VFW 1110 -->
 <html>
-<head>
-<meta charset="utf-8" />
-<meta name = "keywords" content="html5, mobile development, Full Sail University" />
-<meta name= "description" content="My first HTML5 document. " />
-<meta name = "robots" content="index, follow" />
-<meta name = "viewport" content="user-scalable=yes, width=device-width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="MobileOptimized" content="320" />
- 
-<title>Axis Church</title>
- <link href = "css/style.css" rel = "stylesheet" type = "text/css" />
- 
-</head>
-<body>
- 
-<!--Header -->
-  <header>
-  <h1>Axis Church Ministry Opportunities</h1>
-  <!-- Navigation-->
-<nav>
-<ul>
-<li><a href=index.html id="home">Home</a></li>
-<li><a href="#"id="next">Next</a></li>
-<li><a href="#" id="prev">Previous</a></li>
-<li><a href="#" id="login">Login</a></li>
-</ul>
-</nav>
- 
-<h2>Sign-up for Ministry Opportunities and Updates.</h2>
-</header>
- 
-<form action ="#" method="post" id="minform">
-<fieldset id="minfieldset">
-<legend>axis ministry form</legend>
- 
-<ul id="geninfo"> <!-- Labels and info boxes -->
-<li><label for="fname">First Name:</label><input type="text" id="fname" /></li>
-<li><label for="lname">Last Name:</label><input type="text" id="lname" /></li>
-<li><label for="email">Email:</label><input type="email" id="email" /></li>
-<li><label for="tel">Phone Number:</label><input type="tel" id="tel" /></li>
-</ul>
- 
-<ul id="dob"><!--birthdate-->
-<li>Enter Birthday: format(YYYY-MM-DD)
-<input type="date" name="user_date" /></li>
-</ul>
- 
-<!-- question -->
-<ul id="radios">
-<li>Sex</li>
- <ul>
-<input type="radio" checked value="male" id="male" name="sex" /><label for="male">Male</label>
-<input type="radio" value="female" id="female" name="sex"/><label for="female">Female</label>
-</ul>
-</ul>	
- 
- 
-<!--dropdown menu -->
-<ul>
-<li id="select">
-<label for="dropdown">Axis Ministry Opportunies:</label> 
-</li>
-			
-</ul>
-
-<ul>
-<!--slider-->
-<li><label for="attending">How long (in months) have you been attendng Axis Church</label></li>
-<input type="range" min="0" max="30" value="0" id="attending" onchange="showValue(this.value)" />
-<span id="range">0</span>
-<script type="text/javascript">
-function showValue(newValue)
-{
-	document.getElementById("range").innerHTML=newValue;
-}
-</script>
-</li>
-<!--partner? -->
-<li>Are you an Axis Church Partner?(Leave blank for no.)</li>
-<input type="checkbox" id="partner" name="yes" value="yes">Yes
-
- 
-<li>If yes, please indicate whether you came from another church or are a new believer.</li>
-<label for="memtype">Transplant/New Believer:</label><input type="text" id="memtype" />
- 
-<!--comments -->
-<li><p id="story">Please Share your faith history and testimony here:</p>
-<textarea rows="15" cols="30">Type here!</textarea></li>
-</ul>
-
-</fieldset>
-<!--submit-->
-<input type="submit" id="submit" value="Submit Form" />
-</form>	
-<div id="storeData">
-<!--Data links -->
-<a href="#" id="clear">Clear Stored Data</a>  
-<a href="#" id="displayLink">Display Data</a>
-<a href="additem.html" id="addnew" style="display:none;">Add New Item</a>
-</div>
- 
-<small>&copy;2011 Matt Toft VFW1110</small>
-<script src="js/main.js" type="text/javascript"></script>
-
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name = "keywords" content="html5, mobile development, Full Sail University" />
+		<meta name= "description" content="My first HTML5 document. " />
+		<meta name = "robots" content="index, follow" />
+		<meta name = "viewport" content="user-scalable=yes, width=device-width" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<title>Axis Church</title>
+		<link href = "css/style.css" rel = "stylesheet" type = "text/css" />
+	</head>
+	<body>
+		<!--Header -->
+		<header>
+			<h1>Axis Church Ministry Opportunities</h1>
+			<!-- Navigation-->
+			<nav>
+				<ul>
+					<li>
+						<a href=index.html id="home">Home</a>
+					</li>
+					<li>
+						<a href="#"id="next">Next</a>
+					</li>
+					<li>
+						<a href="#" id="prev">Previous</a>
+					</li>
+				</ul>
+			</nav>
+			<h2>Sign-up for Ministry Opportunities and Updates.</h2>
+		</header>
+		<form action ="#" method="post" id="minform">
+			<fieldset id="minfieldset">
+				<legend>
+					axis ministry form
+				</legend>
+				<ul id="geninfo">
+					<!-- Labels and info boxes -->
+					<li>
+						<label for="fname">First Name:</label>
+						<input type="text" id="fname" />
+					</li>
+					<li>
+						<label for="lname">Last Name:</label>
+						<input type="text" id="lname" />
+					</li>
+					<li>
+						<label for="email">Email:</label>
+						<input type="email" id="email" />
+					</li>
+					<li>
+						<label for="tel">Phone Number:</label>
+						<input type="tel" id="tel" />
+					</li>
+				</ul>
+				<ul>
+					<!--birthdate-->
+					<li>
+						Enter Birthday: format(YYYY-MM-DD)
+						<input id="dob" type="date" name="user_date" />
+					</li>
+				</ul>
+				<!-- question -->
+				<ul id="radios">
+					<li>
+						Sex
+					</li>
+					<ul>
+						<input type="radio" value="male" id="male" name="sex" />
+						<label for="male">Male</label>
+						<input type="radio" value="female" id="female" name="sex"/>
+						<label for="female">Female</label>
+					</ul>
+				</ul>
+				<!--dropdown menu -->
+				<ul>
+					<li id="select">
+						<label for="dropdown">Axis Ministry Opportunies:</label>
+					</li>
+				</ul>
+				<ul>
+					<!--slider-->
+					<li>
+						<label for="attending">How long (in months) have you been attendng Axis Church</label>
+					</li>
+					<input type="range" min="0" max="30" value="0" id="attending" onchange="showValue(this.value)" />
+					<span id="range">0</span>
+					<script type="text/javascript">
+						function showValue(newValue) {
+							document.getElementById("range").innerHTML = newValue;
+						}
+					</script>
+					</li> <!--partner? -->
+					<li>
+						Are you an Axis Church Partner?(Leave blank for no.)
+					</li>
+					<input type="checkbox" id="partner" name="yes" value="yes">
+					Yes
+					<li>
+						If yes, please indicate whether you came from another church or are a new believer.
+					</li>
+					<label for="memtype">Transplant/New Believer:</label>
+					<input type="text" id="memtype" />
+					<!--comments -->
+					<li>
+						<label for="story">Please Share your faith history and testimony here:</label>
+						<textarea id="story" rows="15" cols="30">Type here!</textarea>
+</li>				</ul>
+			</fieldset>
+			<!--submit-->
+			<input type="submit" id="submit" value="Submit Form" />
+		</form>
+		<!--Data links -->
+		<a href="#" id="clear">Clear Stored Data</a>
+		<a href="#" id="displayLink">Display Data</a>
+		<a href="additem.html" id="addnew" style="display:none;">Add New Item</a>
+		</div> <small>&copy;2011 Matt Toft VFW1110</small>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
 </html>
- 
- 
- 
