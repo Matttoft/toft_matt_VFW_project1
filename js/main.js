@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", function(){
             item.email=["Email:", $('email').value];
             item.tel=["Telephone #:", $('tel').value];
             item.dob=["Birthdate:", $('dob').value];
-      item.radios=["Sex:", sexval];
+      		item.radios=["Sex:", sexval];
             item.group=["Ministry:", $('dropdown').value];
             item.attending=["Attending Months:", $('attending').value];
             item.partner=["Partner:", memtypeval];
@@ -116,7 +116,7 @@ window.addEventListener("DOMContentLoaded", function(){
     	editlink.href ="#";
     	editlink.key=key;
     	var edittext = "Edit Contact";
-//    	editlink.addEventListener("click", edititem);
+    	editlink.addEventListener("click", edititem);
     	editlink.innerHTML=edittext;
     	linksli.appendChild(editlink);
     	
@@ -127,11 +127,39 @@ window.addEventListener("DOMContentLoaded", function(){
     	dellink.href="#";
     	dellink.key=key;
     	var deltext="Delete Contact";
- //   	dellink.addEventListener("click",delitem);
+  //  	dellink.addEventListener("click",delitem);
     	dellink.innerHTML=deltext;
     	linksli.appendChild(dellink);
     	
     } 
+    
+    function edititem(){
+    	var value=localStorage.getitem(this.key);
+    	var item=JSON.parse(value);
+    	
+    	toggleControls("off");
+    	
+    	$('fname').value=item.fname[1];
+    	$('lname').value=item.lname[1];
+    	$('email').value-item.email[1];
+    	$('tel').value=item.tel[1];
+    	$('dob').value=item.dob[1];
+    	var radios =document.forms(0).sex;
+    	for(var i=0; i<radios.length; i++){
+    		if (radios[i].value='male' && item.sex[1]=="male"){
+    			radios[i].setAttribute("checked","checked");
+    		}else if(radios[i].vaule=='female' && item.sex[i]=="female"){
+    			radios[i].setAttribute("checked","checked");
+    		}
+    	}
+    	$('dropdown').value=item.group[1];
+    	$('attending').value=item.attending[1];
+    	if (item.partner[i]=='yes'){
+    		$('partner').setAttribute("checked","checked");
+    	}
+    	$('story').value=item.story[1];
+    	
+    }
       function clearLocal(){
             if(localStorage.length===0){
             alert("There is no data to clear.");     
