@@ -66,8 +66,8 @@ window.addEventListener("DOMContentLoaded", function(){
      
       function storeData(){
             var id=Math.floor(Math.random()*100000001);
-//          getradio();
-      //    getcheckval();
+            getradio();
+            getcheckval();
             var item={};
             item.fname=["First Name:", $('fname').value];
             item.lname=["Last Name:", $('lname').value];
