@@ -94,6 +94,7 @@ window.addEventListener("DOMContentLoaded", function(){
             $('items').style.display="block";
                   for(var i=0, len=localStorage.length; i<len;i++){
                   var makeli = document.createElement('li');
+                  var linksli=document.createElement('li');
                   createlist.appendChild(makeli);    
                   var key=localStorage.key(i);
                   var value=localStorage.getItem(key);
@@ -105,11 +106,32 @@ window.addEventListener("DOMContentLoaded", function(){
                         makesublist.appendChild(makesubli);
                         var optsubtext=obj[n][0]+" "+obj[n][1];
                         makesubli.innerHTML=optsubtext;
+                        makesubli.appendChild(linksli);
                   }
-                 
+                 makeitemlinks(localStorage.key(i), linksli);
             }
       }
-     
+    function makeitemlinks(key, linksli){
+    	var editlink=document.createElement('a');
+    	editlink.href ="#";
+    	editlink.key=key;
+    	var edittext = "Edit Contact";
+//    	editlink.addEventListener("click", edititem);
+    	editlink.innerHTML=edittext;
+    	linksli.appendChild(editlink);
+    	
+    	var breaktag=document.createElement('br');
+    	linksli.appendChild(breaktag);
+    	
+    	var dellink=document.createElement('a');
+    	dellink.href="#";
+    	dellink.key=key;
+    	var deltext="Delete Contact";
+ //   	dellink.addEventListener("click",delitem);
+    	dellink.innerHTML=deltext;
+    	linksli.appendChild(dellink);
+    	
+    } 
       function clearLocal(){
             if(localStorage.length===0){
             alert("There is no data to clear.");     
