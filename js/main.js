@@ -117,10 +117,10 @@ window.addEventListener("DOMContentLoaded", function(){
       }
     function makeitemlinks(key,linksli){
     	var editlink=document.createElement('a');
-    	editlink.href ="#";
+    	editlink.href="#";
     	editlink.key=key;
-    	var edittext = "Edit Contact";
-    	editlink.addEventListener("click", edititem);
+    	var edittext ="Edit Contact";
+    	editlink.addEventListener("click",edititem);
     	editlink.innerHTML=edittext;
     	linksli.appendChild(editlink);
     	
