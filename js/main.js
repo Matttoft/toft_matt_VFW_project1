@@ -184,12 +184,12 @@ window.addEventListener("DOMContentLoaded", function(){
       function validate(e){
       	var getgroup=$('dropdown');
       	var getfname=$('fname');
-      	var getlanme=$('lname');
+      	var getlname=$('lname');
       	var getemail=$('email');
       	
       	errmsg.innerHTML="";
       	getgroup.style.border="1px solid black";
-      	etfname.style.border="1px solid black";
+      	getfname.style.border="1px solid black";
       	getlname.style.border="1px solid black";
       	getemail.style.border="1px solid black";
       	
@@ -209,7 +209,7 @@ window.addEventListener("DOMContentLoaded", function(){
       		getlname.style.border="1px solid red";
       		messagearray.push(lnameerror);
       	}
-      	var re=/^\w+({\.-}?\w+)@\w+({\.-}?\w+)*(\.\w{2,3})+$/;
+      	var re=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       	if(!(re.exec(getemail.value))){
       		var emailerror="Please Enter a Valid Email Address";
       			getemail.style.border="1px solid red";
