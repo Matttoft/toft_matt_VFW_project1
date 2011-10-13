@@ -64,8 +64,12 @@ window.addEventListener("DOMContentLoaded", function(){
             }
       }
      
-      function storeData(){
+      function storeData(key){
+      	if(!key){
             var id=Math.floor(Math.random()*100000001);
+           }else{
+           	id=key;
+           }
             getradio();
             getcheckval();
             var item={};
@@ -127,7 +131,7 @@ window.addEventListener("DOMContentLoaded", function(){
     	dellink.href="#";
     	dellink.key=key;
     	var deltext="Delete Contact";
-  //  	dellink.addEventListener("click",delitem);
+    	dellink.addEventListener("click",delitem);
     	dellink.innerHTML=deltext;
     	linksli.appendChild(dellink);
     	
@@ -169,13 +173,23 @@ window.addEventListener("DOMContentLoaded", function(){
     editsubmit.key=this.key;
     	
     }
+    function delitem(){
+    	var ask=confirm("Are you sure?");
+    	if(ask){
+    		localStorage.removeItem(this.key);
+    		alert("Item Deleted.")
+    		window.location.reload();
+    	}else{
+    		alert("Item Not Deleted.")
+    	}
+    }
     
       function clearLocal(){
             if(localStorage.length===0){
             alert("There is no data to clear.");     
             }else{
                   localStorage.clear();
-                  alert("Storage Cleared")
+                  alert("Storage Cleared.")
                   window.location.reload();
                   return false;
             }
@@ -225,7 +239,7 @@ window.addEventListener("DOMContentLoaded", function(){
       		e.preventDefault();
       	    return false;
       	}else{
-      		storeData();
+      		storeData(this.key);
       	}
       	
       }
