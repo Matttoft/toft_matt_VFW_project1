@@ -134,7 +134,7 @@ window.addEventListener("DOMContentLoaded", function(){
     } 
     
     function edititem(){
-    	var value=localStorage.getitem(this.key);
+    	var value=localStorage.getItem(this.key);
     	var item=JSON.parse(value);
     	
     	toggleControls("off");
@@ -144,22 +144,32 @@ window.addEventListener("DOMContentLoaded", function(){
     	$('email').value-item.email[1];
     	$('tel').value=item.tel[1];
     	$('dob').value=item.dob[1];
-    	var radios =document.forms(0).sex;
+    	var radios=document.forms[0].sex;
     	for(var i=0; i<radios.length; i++){
-    		if (radios[i].value='male' && item.sex[1]=="male"){
+    		if (radios[i].value=='male' && item.sex[1]=="male"){
     			radios[i].setAttribute("checked","checked");
-    		}else if(radios[i].vaule=='female' && item.sex[i]=="female"){
+    		}else if(radios[i].value=='female' && item.sex[1]=="female"){
     			radios[i].setAttribute("checked","checked");
     		}
     	}
     	$('dropdown').value=item.group[1];
     	$('attending').value=item.attending[1];
-    	if (item.partner[i]=='yes'){
+    	if (item.partner[1]=='yes'){
     		$('partner').setAttribute("checked","checked");
     	}
-    	$('story').value=item.story[1];
+    	$('memtype').value=item.memtype[1];
+    	$('story').value=item.story[1]; 
+    
+    
+    save.removeEventListener("click",storedata)
+    
+    $('submit').value="Edit Contact";
+    var editsubmit=$('submit');
+    editsubmit.addEventListener("click", vailidate);
+    editsubmit.key=this.key;
     	
     }
+    
       function clearLocal(){
             if(localStorage.length===0){
             alert("There is no data to clear.");     
@@ -170,6 +180,13 @@ window.addEventListener("DOMContentLoaded", function(){
                   return false;
             }
       }
+      
+      function validate(){
+      	
+      	
+      }
+      
+      
       var ministry=["--Select One--",
       "Impressions (Greeter)",
       "Usher",
