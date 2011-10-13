@@ -108,10 +108,10 @@ window.addEventListener("DOMContentLoaded", function(){
                         makesubli.innerHTML=optsubtext;
                         makesubli.appendChild(linksli);
                   }
-                 makeitemlinks(localStorage.key(i), linksli);
+                 makeitemlinks(localStorage.key(i),linksli);
             }
       }
-    function makeitemlinks(key, linksli){
+    function makeitemlinks(key,linksli){
     	var editlink=document.createElement('a');
     	editlink.href ="#";
     	editlink.key=key;
@@ -181,8 +181,52 @@ window.addEventListener("DOMContentLoaded", function(){
             }
       }
       
-      function validate(){
+      function validate(e){
+      	var getgroup=$('dropdown');
+      	var getfname=$('fname');
+      	var getlanme=$('lname');
+      	var getemail=$('email');
       	
+      	errmsg.innerHTML="";
+      	getgroup.style.border="1px solid black";
+      	etfname.style.border="1px solid black";
+      	getlname.style.border="1px solid black";
+      	getemail.style.border="1px solid black";
+      	
+      	var messagearray=[];
+      	if(getgroup==="--Select One--"){
+      		var grouperror='Please Choose a Ministry Option.';
+      		getgroup.style.border="1px solid red";
+      		messagearray.push(grouperror);
+      	}
+      	if(getfname.value===""){
+      		var fnameerror='Please Enter a First Name.';
+      		getfname.style.border="1px solid red";
+      		messagearray.push(fnameerror);
+      	}
+      	if(getlname.value===""){
+      		var lnameerror='Please Enter a Last Name.';
+      		getlname.style.border="1px solid red";
+      		messagearray.push(lnameerror);
+      	}
+      	var re=/^\w+({\.-}?\w+)@\w+({\.-}?\w+)*(\.\w{2,3})+$/;
+      	if(!(re.exec(getemail.value))){
+      		var emailerror="Please Enter a Valid Email Address";
+      			getemail.style.border="1px solid red";
+      			messagearray.push(emailerror);
+      			
+      	}      	     
+      	if(messagearray.length>=1){
+      		for(var i=0, j=messagearray.length; i<j; i++){
+      			var text=document.createElement('li');
+      			text.innerHTML=messagearray[i];
+      			errmsg.appendChild(text);
+      		}
+      		e.preventDefault();
+      	    return false;
+      	}else{
+      		storeData();
+      	}
       	
       }
       
@@ -199,7 +243,10 @@ window.addEventListener("DOMContentLoaded", function(){
       "Nursery (newborn-3yr)",
       "Outreach"]; 
    var sexval;
-   var memtypeval="No";
+   var memtypeval="No",
+   	   errmsg=$('errors');
+   
+   
     makeList();
  
    
@@ -213,6 +260,6 @@ window.addEventListener("DOMContentLoaded", function(){
  
       var save = $('submit');
      
-      save.addEventListener("click", storeData);
+      save.addEventListener("click", validate);
       });
  
