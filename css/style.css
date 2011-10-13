@@ -2,73 +2,59 @@
  * Matt Toft
  */
 
-
-
-body {font-family:Arial, Helvectica, san-serif;
-width: 571px;
-margin: auto;
-padding: 10px;
-background: #1C1A17;
-color: #D2CDBD;
-#content{width: 480px;height: 690px;overflow: scroll;}
+body {
+	font-family: Arial, Helvectica, san-serif;
+	width: 571px;
+	margin: auto;
+	padding: 10px;
+	background: #1C1A17;
+	color: #D2CDBD;#content{
+	width: 480px;
+	height: 690px;
+	overflow: scroll;
+}
 }
 
-h1{
-text-align: center;
-margin: 10px 60px;
-border: 3px solid black;
-padding: 3px;
-background:   #1C1A17;
-color:#D2CDBD;		
+h1 {
+	color: #D2CDBD;
+	background-image: -moz-linear-gradient(19% 75% 90deg,#ababab, #c9c9c9, #c7c7c7 100%);
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 1px 2px 3px #303030;
+	padding: 5px;
+	margin: 0px;
+	text-align: center;
 }
-
-h2{
-text-align: center;	
-margin: 10px 60px;
-border: 3px solid black;
-padding: 3px;
-background: #1C1A17;	
-color:#D2CDBD;	
+h2 {
+	padding: 0px 10px 0px 10px;
+	color: #D2CDB5;
+	text-shadow: 1px 2px 3px #303030;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
 }
-
-nav{
-font-family: Helvetica, san-serif;
-font-weight: bold;
-text-transform: uppercase;
-color: #D2CDBD;	
-
+nav {
+	font-family: Helvetica, san-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #D2CDBD;
+	text-align: center;
 }
-
-p{
-font-family: Arial, Helvetica, san-serif;
-	
+p {
+	font-family: Arial, Helvetica, san-serif;
+	text-align: center;
 }
-
-legend{
-color: #000000;
-text-transform: uppercase;
-font-weight: bold;
+legend {
+	color: #000000;
+	text-transform: uppercase;
+	font-weight: bold;
 }
-
 form {
-background: #D2CDBD;
-color: #1C1A17;
--webkit-box-shadow:
-inset 5px 5px 64px,
-inset -5px -5px 64px;
--moz-box-shadow:
-inset 5px 5px 64px,
-inset -5px -5px 64px;
-box-shadow:
-inset 5px 5px 64px,
-inset -5px -5px 64px;
+	background: #D2CDBD;
+	color: #1C1A17;
+	-webkit-box-shadow: inset 5px 5px 64px, inset -5px -5px 64px;
+	-moz-box-shadow: inset 5px 5px 64px, inset -5px -5px 64px;
+	box-shadow: inset 5px 5px 64px, inset -5px -5px 64px;
 }
-
-option{
-color: green;	
+option {
+	color: green;
 }
-
-
-
-
 
