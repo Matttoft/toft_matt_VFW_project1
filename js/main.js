@@ -208,7 +208,7 @@ window.addEventListener("DOMContentLoaded", function(){
       	getemail.style.border="1px solid black";
       	
       	var messagearray=[];
-      	if(getgroup==="--Select One--"){
+      	if(getgroup.value==="--Select One--"){
       		var grouperror='Please Choose a Ministry Option.';
       		getgroup.style.border="1px solid red";
       		messagearray.push(grouperror);
