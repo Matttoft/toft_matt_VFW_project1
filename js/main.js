@@ -53,7 +53,7 @@ window.addEventListener("DOMContentLoaded", function(){
                         $('addnew').style.display="inline";
                         break;
                   case "off":
-                        $('minitform').style.display="block";
+                        $('minform').style.display="block";
                         $('clear').style.display="inline";
                         $('displayLink').style.display="inline";
                         $('addnew').style.display="none";
@@ -145,14 +145,14 @@ window.addEventListener("DOMContentLoaded", function(){
     	
     	$('fname').value=item.fname[1];
     	$('lname').value=item.lname[1];
-    	$('email').value-item.email[1];
+    	$('email').value=item.email[1];
     	$('tel').value=item.tel[1];
     	$('dob').value=item.dob[1];
     	var radios=document.forms[0].sex;
     	for(var i=0; i<radios.length; i++){
-    		if (radios[i].value=='male' && item.sex[1]=="male"){
+    		if (radios[i].value=='male' && item.radios[1]=="male"){
     			radios[i].setAttribute("checked","checked");
-    		}else if(radios[i].value=='female' && item.sex[1]=="female"){
+    		}else if(radios[i].value=='female' && item.radios[1]=="female"){
     			radios[i].setAttribute("checked","checked");
     		}
     	}
@@ -165,11 +165,11 @@ window.addEventListener("DOMContentLoaded", function(){
     	$('story').value=item.story[1]; 
     
     
-    save.removeEventListener("click",storedata)
+    save.removeEventListener("click",storeData);
     
     $('submit').value="Edit Contact";
     var editsubmit=$('submit');
-    editsubmit.addEventListener("click", vailidate);
+    editsubmit.addEventListener("click", validate);
     editsubmit.key=this.key;
     	
     }
