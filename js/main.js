@@ -90,6 +90,10 @@ window.addEventListener("DOMContentLoaded", function(){
      
       function getdata(){
             toggleControls("on")
+			if(localStorage.length===0){
+				autofilldata();
+				alert("There is no data in local storage, default data was added.");
+			}
             var makediv=document.createElement('div');
             makediv.setAttribute("id","items");
             var createlist=document.createElement('ul');
@@ -105,6 +109,7 @@ window.addEventListener("DOMContentLoaded", function(){
                   var obj=JSON.parse(value);
                   var makesublist=document.createElement('ul');
                   makeli.appendChild(makesublist);
+                  getimage(makesublist);
                   for(var n in obj){
                         var makesubli=document.createElement('li');
                         makesublist.appendChild(makesubli);
@@ -115,6 +120,50 @@ window.addEventListener("DOMContentLoaded", function(){
                  makeitemlinks(localStorage.key(i),linksli);
             }
       }
+      
+      function getimage(){
+      	var imageli=document.createElement('li');
+      	makesublist.appendChild(imageli);
+      	var newimg=document.createElement('img');
+      	var setsource=newimg.setAttribute('src',"/img/"+ catname +".gif");
+      	imageli.appendChild(newimg);
+      }
+      
+      function autofilldata(){
+      	var json={
+      		'contact1':{
+      			"fname":["First Name:", "Matt"],
+      			"lname":["Last Name:", "Toft"],
+      			"email":["Email:","matttoft@fullsail.edu"],
+      			"tel":["Telephone:","513-555-0559"],
+      			"dob":["Birthdate:","2011-10-11"],
+      			"radios":["Sex:","male"],
+      			"group":["Ministry:","Usher"],
+      			'attending':['Attending Months:',"6"],
+      			'partner':["Partner:","Yes"],
+      			'memtype':["Member Type:","Transplant"],
+      			'story':["Story:","raised in church."]	
+      		},
+      		'contact2':{
+      			"fname":["First Name:", "Kim"],
+      			"lname":["Last Name:", "Toft"],
+      			"email":["Email:","osulilbit@aol.com"],
+      			"tel":["Telephone:","513-555-0559"],
+      			"dob":["Birthdate:","2011-10-11"],
+      			"radios":["Sex:","female"],
+      			"group":["Ministry:","Custodial"],
+      			'attending':['Attending Months:',"6"],
+      			'partner':["Partner:","Yes"],
+      			'memtype':["Member Type:","Transplant"],
+      			'story':["Story:","raised in church."]	
+      		}
+      	};
+      	for(var n in json){
+      	var id=Math.floor(Math.random()*100000001);
+      	localStorage.setItem(id, JSON.stringify(json[n]));
+      	}
+      }
+      
     function makeitemlinks(key,linksli){
     	var editlink=document.createElement('a');
     	editlink.href="#";
@@ -253,6 +302,7 @@ window.addEventListener("DOMContentLoaded", function(){
       "Kids Kraze Worship Team",
       "Kids Kraze Tech",
       "Adult Worship Team",
+      "Adult Worship Tech",
       "Nursery (4yr-K)",
       "Nursery (newborn-3yr)",
       "Outreach"]; 
