@@ -109,7 +109,7 @@ window.addEventListener("DOMContentLoaded", function(){
                   var obj=JSON.parse(value);
                   var makesublist=document.createElement('ul');
                   makeli.appendChild(makesublist);
-                  getimage(makesublist);
+                  getimage(obj.dropdown[1],makesublist);
                   for(var n in obj){
                         var makesubli=document.createElement('li');
                         makesublist.appendChild(makesubli);
@@ -121,11 +121,11 @@ window.addEventListener("DOMContentLoaded", function(){
             }
       }
       
-      function getimage(){
+      function getimage(catname, makesublist){
       	var imageli=document.createElement('li');
       	makesublist.appendChild(imageli);
       	var newimg=document.createElement('img');
-      	var setsource=newimg.setAttribute('src',"/img/"+ catname +".gif");
+      	var setsrc=newimg.setAttribute('src',"img/"+ catname +".gif");
       	imageli.appendChild(newimg);
       }
       
@@ -138,7 +138,7 @@ window.addEventListener("DOMContentLoaded", function(){
       			"tel":["Telephone:","513-555-0559"],
       			"dob":["Birthdate:","2011-10-11"],
       			"radios":["Sex:","male"],
-      			"group":["Ministry:","Usher"],
+      			"dropdown":["Ministry:","Usher"],
       			'attending':['Attending Months:',"6"],
       			'partner':["Partner:","Yes"],
       			'memtype':["Member Type:","Transplant"],
@@ -151,7 +151,7 @@ window.addEventListener("DOMContentLoaded", function(){
       			"tel":["Telephone:","513-555-0559"],
       			"dob":["Birthdate:","2011-10-11"],
       			"radios":["Sex:","female"],
-      			"group":["Ministry:","Custodial"],
+      			"dropdown":["Ministry:","Custodial"],
       			'attending':['Attending Months:',"6"],
       			'partner':["Partner:","Yes"],
       			'memtype':["Member Type:","Transplant"],
