@@ -2,6 +2,26 @@
  * Matt Toft
  */
 
+#minfieldset ul {
+	list-style-type: none;
+}
+#items ul {
+	list-style-type: none;
+}
+
+#range {
+	text-align:center;
+	color: #1C1A17 ;	
+}
+
+#req{
+	font-weight: bold;
+	
+}
+input:hover{
+	 border: 1px solid #006;
+    background: #ffc;
+}
 body {
 	font-family: Arial, Helvectica, san-serif;
 	width: 571px;
@@ -23,7 +43,7 @@ h1 {
 	margin: 0px;
 	text-align: center;
 }
-h2,h3 {
+h2, h3 {
 	padding: 0px 10px 0px 10px;
 	color: #D2CDB5;
 	text-shadow: 1px 2px 3px #303030;

@@ -21,13 +21,7 @@ Term: VFW 1110 -->
 			<!-- Navigation-->
 			<nav>
 				<p>
-					
-						<a href=index.html id="home">Home</a>
-					<br>
-						<a href="#"id="next">Next</a>
-					<br>
-						<a href="#" id="prev">Previous</a>
-					
+					<a href=index.html id="home">Home</a>
 				</p>
 			</nav>
 			<h3>Sign-up for Ministry Opportunities and Updates.</h3>
@@ -37,7 +31,7 @@ Term: VFW 1110 -->
 				<legend>
 					axis ministry form
 				</legend>
-				<span> * Fields are required.</span>
+				<span id="req"> * Fields are required.</span>
 				<ul id='errors'></ul>
 				<ul id="geninfo">
 					<!-- Labels and info boxes -->
@@ -61,7 +55,7 @@ Term: VFW 1110 -->
 				<ul>
 					<!--birthdate-->
 					<li>
-						Enter Birthday: format(YYYY-MM-DD)
+						Enter Birthday:(YYYY-MM-DD)
 						<input id="dob" type="date" name="user_date" />
 					</li>
 				</ul>
@@ -96,19 +90,24 @@ Term: VFW 1110 -->
 							document.getElementById("range").innerHTML = newValue;
 						}
 					</script>
-					</li> <!--partner? -->
+					</li> 
+					<!--partner? -->
+					<br>
+					<br>
 					<li>
 						Are you an Axis Church Partner?(Leave blank for no.)
 					</li>
 					<input type="checkbox" id="partner" name="yes" value="yes">
 					Yes
-					
+					<br>
+					<br>
 					<li>
 						If yes, please indicate whether you came from another church or are a new believer.
 					</li>
 					<label for="memtype">Transplant/New Believer:</label>
 					<input type="text" id="memtype" />
-					
+					<br>
+					<br>
 					<!--comments -->
 					<li>
 						<label for="story">Please Share your faith history and testimony here:</label>
