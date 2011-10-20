@@ -7,6 +7,7 @@
 }
 #items ul {
 	list-style-type: none;
+	
 }
 
 #range {
@@ -77,6 +78,7 @@ form {
 option {
 	color: green;
 }
+	
 footer {
 	text-align: center;
 }
